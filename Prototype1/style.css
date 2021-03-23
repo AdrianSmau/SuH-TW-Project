@@ -1,0 +1,170 @@
+/*
+Custom fonts
+*/
+
+@font-face {
+    font-family: 'avangers-font';
+    src: url('fonts/AvengeroRegular-zvgl.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'black-widow-font';
+    src: url('fonts/BlackWidowMovie-d95Rg.ttf') format('truetype');
+}
+
+html {
+    background: url("images/wallpaper-2472925.jpg") no-repeat right bottom fixed;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    color: white;
+}
+
+
+/*
+Back to top button
+*/
+
+#back-to-top {
+    font-family: 'black-widow-font';
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 999;
+    background-color: #0476F2;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 1.5px black;
+    color: black;
+    padding: 12px;
+    border-radius: 30%;
+    font-size: 30px;
+}
+
+#back-to-top:hover {
+    outline: none;
+    box-shadow: 0 0 0 1.5px black;
+    color: white;
+    background-color: #ED1D24;
+}
+
+
+/*header section*/
+
+.header-bar {
+    padding: 7.5px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    clear: both;
+    overflow: hidden;
+}
+
+
+/* 1st header component - LOGO */
+
+.logo-section {
+    flex: 1 1;
+}
+
+.logo-section img {
+    width: 150px;
+}
+
+
+/* 2nd header component - NAVBAR */
+
+.header-nav {
+    font-family: 'avangers-font';
+    font-size: small;
+    flex: 4 2;
+}
+
+.header-nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    clear: both;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav ul li {
+    flex: 1 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    clear: both;
+    overflow: hidden;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    position: relative;
+}
+
+.header-nav ul li a:hover {
+    color: rgba(255, 255, 255, 0.75)
+}
+
+.header-nav ul li a:after {
+    bottom: 0;
+    content: ".";
+    height: 1.5px;
+    left: 50%;
+    position: absolute;
+    color: transparent;
+    background: #0476F2;
+    transition: width 0.2s ease 0s, left 0.2s ease 0s;
+    width: 0;
+}
+
+.header-nav ul li a:hover:after {
+    background: #ED1D24;
+    width: 100%;
+    left: 0;
+}
+
+
+/* 3rd header component - LOGIN/REGISTER BUTTONS */
+
+.user-section {
+    flex: 1 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+
+/*
+Section (incomplete yet)
+*/
+
+section {
+    height: 100vh;
+}
