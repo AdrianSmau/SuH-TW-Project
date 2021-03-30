@@ -1,0 +1,522 @@
+/*
+Custom fonts
+*/
+
+@font-face {
+    font-family: 'marvel-regular-font';
+    src: url('fonts/MarvelRegular-Dj83.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'avangers-font';
+    src: url('fonts/AvengeroRegular-zvgl.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'black-widow-font';
+    src: url('fonts/BlackWidowMovie-d95Rg.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'comics-font';
+    src: url('fonts/HoustonComicsPersonalUse-6Yea1.ttf') format('truetype');
+}
+
+html {
+    zoom: 87.5%;
+    background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)), url("images/Background/wallpaper-2472925.jpg") no-repeat right bottom fixed;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+footer {
+    text-align: left;
+    background-color: black;
+    color: white;
+    max-width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7.5px;
+    clear: both;
+    overflow: hidden;
+}
+
+footer>p {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 22px;
+}
+
+section {
+    margin-left: 30px;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    color: white;
+}
+
+
+/*
+Page Preloader
+*/
+
+.pre-loader {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pre-loader>img {
+    width: 300px;
+}
+
+.pre-loader.hidden {
+    animation: fadeOutLoader 1.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutLoader {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+/*
+Back to top button
+*/
+
+#back-to-top {
+    font-family: 'black-widow-font';
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 99;
+    background-color: #0476F2;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 1.5px black;
+    color: black;
+    padding: 12px;
+    border-radius: 30%;
+    font-size: 30px;
+}
+
+#back-to-top:hover {
+    outline: none;
+    box-shadow: 0 0 0 1.5px black;
+    color: white;
+    background-color: #ED1D24;
+}
+
+
+/* 
+Minimize button
+*/
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    clear: both;
+    overflow: hidden;
+}
+
+.icon {
+    font-size: 25px;
+    color: white;
+    display: none;
+}
+
+@media (max-width:777px) {
+    .header-nav ul li a {
+        display: none;
+    }
+    .icon {
+        display: block;
+        flex: 1 1;
+    }
+    .user-section {
+        display: none;
+    }
+    .navbar-wrapper {
+        width: 100%;
+    }
+    .navbar-wrapper img {
+        width: 125px;
+    }
+}
+
+@media (max-width:777px) {
+    .header-bar.responsive {
+        display: block;
+    }
+    .header-nav.responsive ul {
+        flex-direction: column;
+    }
+    .header-nav.responsive ul li {
+        padding: 10px;
+        flex-direction: column;
+    }
+    .header-nav.responsive ul li a {
+        display: block;
+    }
+}
+
+
+/*
+HEADER section
+*/
+
+.header-bar {
+    padding: 7.5px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    clear: both;
+    overflow: hidden;
+}
+
+
+/* 1st header component - LOGO */
+
+.logo-section {
+    flex: 1 1;
+}
+
+.logo-section img {
+    width: 150px;
+}
+
+
+/* 2nd header component - NAVBAR */
+
+.header-nav {
+    font-family: 'avangers-font';
+    font-size: 2vh;
+    flex: 6 2;
+}
+
+.header-nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    clear: both;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav ul li {
+    flex: 1 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    clear: both;
+    overflow: hidden;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    position: relative;
+}
+
+.header-nav ul li a:hover {
+    color: rgba(255, 255, 255, 0.75)
+}
+
+.header-nav ul li a:after {
+    bottom: 0;
+    content: ".";
+    height: 1.5px;
+    left: 50%;
+    position: absolute;
+    color: transparent;
+    background: #0476F2;
+    transition: width 0.2s ease 0s, left 0.2s ease 0s;
+    width: 0;
+}
+
+.header-nav ul li a:hover:after {
+    background: #ED1D24;
+    width: 100%;
+    left: 0;
+}
+
+
+/* 3rd header component - LOGIN/REGISTER BUTTONS */
+
+.user-section {
+    flex: 1.5 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+
+/*
+LOGIN button
+*/
+
+.login-button {
+    flex: 1 1;
+    background-color: #ED1D24;
+    cursor: pointer;
+    border-radius: 18px;
+    border: 1mm ridge #ED1D24;
+    color: #ffffff;
+    font-family: 'avangers-font';
+    font-size: 12px;
+    padding: 7px 15px;
+    text-decoration: none;
+}
+
+.login-button:focus {
+    outline: none;
+}
+
+.login-button:hover {
+    background-color: #0476F2;
+    color: black;
+}
+
+.login-button:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/*
+REGISTER button  
+*/
+
+.register-button {
+    flex: 1 1;
+    background-color: #0476F2;
+    cursor: pointer;
+    border-radius: 18px;
+    border: 1mm ridge #0476F2;
+    color: black;
+    font-family: 'avangers-font';
+    font-size: 12px;
+    padding: 7px 15px;
+    text-decoration: none;
+}
+
+.register-button:focus {
+    outline: none;
+}
+
+.register-button:hover {
+    background-color: #ED1D24;
+    color: white;
+}
+
+.register-button:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/*
+HOME Section
+*/
+
+.slideshow-container {
+    max-width: 960px;
+    position: relative;
+    margin: auto;
+}
+
+.slides-fade {
+    overflow: hidden;
+    display: none;
+    height: 540px;
+}
+
+.image-description {
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 540px;
+    font-family: 'comics-font';
+    font-size: 60px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 37px;
+    /* ----- *** ----- */
+    left: 0;
+    right: 0;
+    background: rgba(240, 19, 30, 0.4);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+
+.slides-fade:hover .image-description {
+    visibility: visible;
+    opacity: 1;
+}
+
+.previous,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -32px;
+    padding: 16px;
+    color: black;
+    transition: .6s ease;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.previous {
+    left: -50px;
+}
+
+.next {
+    right: -50px;
+}
+
+.previous:hover {
+    color: black;
+    background-color: #0476F2;
+}
+
+.next:hover {
+    color: white;
+    background-color: #ED1D24;
+}
+
+.dot {
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 10px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    transition: black .6s ease;
+}
+
+.active {
+    background-color: #0476F2;
+}
+
+.dot:hover {
+    background-color: #ED1D24;
+}
+
+
+/*
+ABOUT section
+*/
+
+.about p {
+    text-indent: 35px;
+    letter-spacing: 1px;
+    font-family: 'marvel-regular-font';
+    font-size: large;
+}
+
+.about iframe {
+    border: 0;
+    float: right;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+
+/*
+CONTACT Section
+*/
+
+.contact {
+    font-family: 'comics-font';
+    clear: both;
+    align-content: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    justify-content: space-between;
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.contact li {
+    flex: 1 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact li img {
+    display: flex;
+    width: 300px;
+    border-radius: 30px;
+}
+
+.infos {
+    padding-left: 10px;
+    font-size: larger;
+    display: block;
+}
+
+.infos a {
+    color: black;
+}
