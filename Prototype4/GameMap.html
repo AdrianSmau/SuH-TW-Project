@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="GameMap.css" rel="stylesheet">
+    <link href="images/Favicon/favicon.ico" rel="icon" type="image/x-icon">
+    <title>Game Map</title>
+</head>
+
+<body>
+    <div class="pre-loader">
+        <img src="images/Loading-Gifs/ezgif-4-45b3fdafc22a.gif" alt="Loading...">
+    </div>
+    <p class="welcome-text"> Welcome, [PLAYER_NAME]! Please select the stage you want to play! </p>
+    <div class="wrapper-levels grow">
+        <div class="level1 unlocked">
+            <img alt="Stage I" src="images/Neon/black.jpg">
+            <p class="level1-title">Stage I</p>
+            <div class="tooltip1">
+                <p class="status"></p>
+                <p class="score"></p>
+                <p class="time"></p>
+            </div>
+        </div>
+        <div class="level2 locked">
+            <img alt="Stage II" src="images/Neon/black.jpg">
+            <p class="level2-title">Stage II</p>
+            <div class="tooltip2">
+                <p class="status"></p>
+                <p class="score"></p>
+                <p class="time"></p>
+            </div>
+        </div>
+        <div class="level3 locked">
+            <img alt="Stage III" src="images/Neon/black.jpg">
+            <p class="level3-title">Stage III</p>
+            <div class="tooltip3">
+                <p class="status"></p>
+                <p class="score"></p>
+                <p class="time"></p>
+            </div>
+        </div>
+        <div class="level4 locked">
+            <img alt="Stage IV" src="images/Neon/black.jpg">
+            <p class="level4-title">Stage IV</p>
+            <div class="tooltip4">
+                <p class="status"></p>
+                <p class="score"></p>
+                <p class="time"></p>
+            </div>
+        </div>
+        <div class="level5 locked">
+            <img alt="Stage V" src="images/Neon/black.jpg">
+            <p class="level5-title">Stage V</p>
+            <div class="tooltip5">
+                <p class="status"></p>
+                <p class="score"></p>
+                <p class="time"></p>
+            </div>
+        </div>
+        <div class="level6 locked">
+            <img alt="Stage VI" src="images/Neon/black.jpg">
+            <p class="level6-title">Stage VI</p>
+            <div class="tooltip6">
+                <p class="status"></p>
+                <p class="score"></p>
+                <p class="time"></p>
+            </div>
+        </div>
+        <div class="level7 locked">
+            <img alt="Stage VII" src="images/Neon/black.jpg">
+            <p class="level7-title">Stage VII</p>
+            <div class="tooltip7">
+                <p class="status"></p>
+                <p class="score"></p>
+                <p class="time"></p>
+            </div>
+        </div>
+    </div>
+    <div class="back-button grow">
+        <img src="images/Neon/Back.png" alt="Back to Main Menu">
+    </div>
+    <div id="id-wrapper-progress-bar" class="wrapper-progress-bar">
+        <p class="wrapper-progress-bar-text">Progress Bar</p>
+        <div id="id-progress-bar" class="progress-bar">
+            <p id="progress-bar-text" class="progress-bar-text"></p>
+        </div>
+    </div>
+
+    <div id="score-pannel" class="score-pannel">
+        <p class="score-title"> Score </p>
+        <p id="score-text" class="score-text" score=0>0/35</p>
+    </div>
+
+    <!--Script for page preloader functionality-->
+    <script src="Scripts/preLoader.js"></script>
+    <!--Script for tooltip update-->
+    <script src="Scripts/setTooltip.js"></script>
+    <!--Script for progress bar fill, by tying it with the score-->
+    <script src="Scripts/incrementScore.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,389 @@
+@font-face {
+    font-family: 'gotham-font';
+    src: url('fonts//Batfont-e9mm.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'batman-font';
+    src: url("fonts/batmfa__.ttf");
+}
+
+html,
+body {
+    margin: 0;
+}
+
+html {
+    background: black url("images/Background/image.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body {
+    user-select: none;
+    /*!!!!!*/
+    font-family: 'batman-font';
+    text-align: center;
+    color: #1ddd33;
+    text-shadow: 0 0 10px #C724B1, 0 0 15px #C724B1, 0 0 20px #C724B1, 0 0 25px #C724B1, 0 0 30px #C724B1, 0 0 35px #C724B1;
+    border: 0;
+}
+
+
+/*
+Page Preloader
+*/
+
+.pre-loader {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pre-loader>img {
+    width: 300px;
+}
+
+.pre-loader.hidden {
+    animation: fadeOutLoader 1.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutLoader {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.welcome-text {
+    font-size: 22.5px;
+}
+
+
+/*
+SCORE PANNEL
+*/
+
+.score-pannel {
+    box-shadow: 0 0 10px #C724B1, 0 0 15px #C724B1, 0 0 20px #C724B1, 0 0 25px #C724B1, 0 0 30px #C724B1, 0 0 35px #C724B1;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 40px;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    display: block;
+    clear: both;
+    overflow: hidden;
+    background-color: #2E1A47;
+    color: white;
+    border-radius: 25%;
+}
+
+.score-title {
+    display: inline;
+    vertical-align: middle;
+    line-height: 40px;
+    text-shadow: none;
+}
+
+.score-text {
+    display: inline;
+    vertical-align: middle;
+    line-height: 20px;
+    text-shadow: none;
+}
+
+
+/*
+BACK BUTTON
+*/
+
+.back-button {
+    padding-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+.back-button img {
+    cursor: pointer;
+    width: 80px;
+}
+
+.wrapper-levels {
+    font-family: 'gotham-font';
+    font-size: 18.5px;
+}
+
+.wrapper-levels p {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.wrapper-levels {
+    padding: 0 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    top: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+    clear: both;
+    overflow: hidden;
+}
+
+
+/*
+PROGRESS BAR
+*/
+
+.wrapper-progress-bar {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    bottom: 50px;
+    width: 40%;
+    height: 20px;
+    border-radius: 25px;
+    background-color: #2E1A47;
+    box-shadow: 0 0 10px #C724B1, 0 0 15px #C724B1, 0 0 20px #C724B1, 0 0 25px #C724B1, 0 0 30px #C724B1, 0 0 35px #C724B1;
+    left: 30%;
+}
+
+.progress-bar-text {
+    display: inline;
+    text-shadow: none;
+    color: black;
+}
+
+.wrapper-progress-bar-text {
+    display: inline;
+    text-shadow: none;
+    color: white;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    background-color: #1ddd33;
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+}
+
+
+/*
+GROW EFFECT
+*/
+
+.grow img {
+    transition: 0.5s;
+}
+
+.grow img:hover {
+    transform: scale(1.2);
+    transition: 0.25 ease;
+}
+
+.level1 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.level2 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.level3 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.level4 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.level5 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.level6 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.level7 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.unlocked img {
+    content: url("images/Neon/Star.png");
+    max-width: 100%;
+    height: auto;
+}
+
+.locked img {
+    content: url("images/Neon/Lock.png");
+    max-width: 100%;
+    height: auto;
+}
+
+.completed img {
+    content: url("images/Neon/Check.png");
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*
+TOOLTIP SECTION
+*/
+
+.level1-title:hover~.tooltip1 {
+    display: block;
+}
+
+.level1-title:hover~.tooltip1>.status,
+.level1-title:hover~.tooltip1>.score,
+.level1-title:hover~.tooltip1>.time {
+    margin: 10px;
+    display: block;
+}
+
+.level2-title:hover~.tooltip2 {
+    display: block;
+}
+
+.level2-title:hover~.tooltip2>.status,
+.level2-title:hover~.tooltip2>.score,
+.level2-title:hover~.tooltip2>.time {
+    margin: 10px;
+    display: block;
+}
+
+.level3-title:hover~.tooltip3 {
+    display: block;
+}
+
+.level3-title:hover~.tooltip3>.status,
+.level3-title:hover~.tooltip3>.score,
+.level3-title:hover~.tooltip3>.time {
+    margin: 10px;
+    display: block;
+}
+
+.level4-title:hover~.tooltip4 {
+    display: block;
+}
+
+.level4-title:hover~.tooltip4>.status,
+.level4-title:hover~.tooltip4>.score,
+.level4-title:hover~.tooltip4>.time {
+    margin: 10px;
+    display: block;
+}
+
+.level5-title:hover~.tooltip5 {
+    display: block;
+}
+
+.level5-title:hover~.tooltip5>.status,
+.level5-title:hover~.tooltip5>.score,
+.level5-title:hover~.tooltip5>.time {
+    margin: 10px;
+    display: block;
+}
+
+.level6-title:hover~.tooltip6 {
+    display: block;
+}
+
+.level6-title:hover~.tooltip6>.status,
+.level6-title:hover~.tooltip6>.score,
+.level6-title:hover~.tooltip6>.time {
+    margin: 10px;
+    display: block;
+}
+
+.level7-title:hover~.tooltip7 {
+    display: block;
+}
+
+.level7-title:hover~.tooltip7>.status,
+.level7-title:hover~.tooltip7>.score,
+.level7-title:hover~.tooltip7>.time {
+    margin: 10px;
+    display: block;
+}
+
+.tooltip1,
+.tooltip2,
+.tooltip3,
+.tooltip4,
+.tooltip5,
+.tooltip6,
+.tooltip7 {
+    outline: solid #C724B1;
+    display: none;
+    text-shadow: none;
+    background-color: black;
+    margin: 0;
+    width: 180px;
+    text-align: center;
+    position: relative;
+    right: 50px;
+}
+
+.tooltip1 {
+    right: 37.5px;
+}
+
+.tooltip7 {
+    right: 62.5px;
+}
+
+@media (max-width:445px) {
+    .wrapper-progress-bar {
+        display: none;
+    }
+}
