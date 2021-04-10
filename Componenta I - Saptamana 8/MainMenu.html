@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="MainMenu.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="images/Favicon/favicon.ico" rel="icon" type="image/x-icon">
+    <title>Main Menu</title>
+</head>
+
+<body>
+    <div class="pre-loader">
+        <img src="images/Loading-Gifs/ezgif-4-45b3fdafc22a.gif" alt="Loading...">
+    </div>
+    <div class="logo-section">
+        <img src="images/Logo/imageedit_8_9012878573.png" style="width: 280px;" alt="Our Logo">
+    </div>
+    <div class="btn-section-wrapper">
+        <div class="btn-section">
+
+            <button> PLAY </button>
+            <button> SOLO ADVENTURES </button>
+            <button id="settings-btn"> SETTINGS</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="language-div">
+                        <h1>Language:</h1>
+                        <form class="limba">
+                            <select>
+                                <option>English</option>
+                                <option>French</option>
+                                <option>German</option>
+                                <option>Chinese</option>
+                                <option>Romanian</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="volume-div">
+                        <img src="https://img.icons8.com/ios-filled/100/000000/low-volume.png" />
+                        <input type="range" ng-model="volume" ng-change="changeVolume($event)" step="0.1" min="0" max="1">
+                    </div>
+                    <div class="mode-div">
+                        <h1>Quizz Display Mode:</h1>
+                        <form>
+                            <select>
+                                <option>Light</option>
+                                <option>Dark</option>
+
+                            </select>
+                        </form>
+                    </div>
+                    <span class="close">&times;</span>
+                </div>
+            </div>
+            <button> LEADERBOARD </button>
+        </div>
+
+    </div>
+    <button class="user-setings grow" id="account-settings-button">
+        <img class="resize" src="images/MainMenu/img-removebg-preview.png" />
+    </button>
+    <div id="myModal-acc" class="modal-acc">
+        <div class="modal-content-acc">
+            <div class="info">
+                <h1>Account Info</h1>
+            </div>
+            <div class="fsr-info">
+                <h1>First Name:</h1>
+                <div>player First Name</div>
+            </div>
+            <div class="lsr-info">
+                <h1>Last Name:</h1>
+                <div>player Last Name</div>
+            </div>
+            <div class="usr-info">
+                <h1>Username:</h1>
+                <div>player username</div>
+            </div>
+            <div class="mail-info">
+                <h1>Mail:</h1>
+                <div>player mail</div>
+            </div>
+            <div class="psr-change">
+                <h1>Change Password</h1>
+            </div>
+            <span class="close-acc">&times;</span>
+        </div>
+    </div>
+    <script src="Scripts/settingsButton.js"></script>
+    <script src="Scripts/accountSettingsButton.js"></script>
+    <script src="Scripts/preLoader.js"></script>
+</body>
+
+</html>
