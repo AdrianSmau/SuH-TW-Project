@@ -1,4 +1,5 @@
 # SuH-TW-Project
+28-08-2021 - Prototype6 - Jocul in sine se apropie de final, mai avem de lucru la interfata cu utilizatorul, generarea de feed RSS la leaderboard si internationalizare!<br>
 [NOTA] - De acum, vom incarca arhive, intrucat avem peste 100 de fisiere! <br>
 15-08-2021 - Prototype5 - Primii pasi pe partea de back-end - un system de Login, Register simplu, un sistem de leaderboard! <br>
 11-04-2021 - Componenta I - Saptamana 8 - Partea de Front-End, pentru evaluarea din saptamana a 8-a. Raportul se gaseste in folderul 'Componenta I - Saptamana 8' alaturi de toate celelalte elemente aferente acestei componente, sub numele "raport.html" <br>
