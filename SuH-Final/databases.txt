@@ -1,0 +1,63 @@
+CREATE TABLE `intrebari` (
+  `stage` int(11) DEFAULT '0',
+  `idQuestion` int(11) NOT NULL,
+  `question` varchar(255) NOT NULL,
+  `answera` varchar(255) NOT NULL,
+  `answerb` varchar(255) NOT NULL,
+  `answerc` varchar(255) NOT NULL,
+  `answerd` varchar(255) NOT NULL,
+  `correct` int(11) NOT NULL,
+  PRIMARY KEY (`question`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `pwdreset` (
+  `pwdResetId` int(11) NOT NULL AUTO_INCREMENT,
+  `pwdResetEmail` text NOT NULL,
+  `pwdResetSelector` text NOT NULL,
+  `pwdResetToken` longtext NOT NULL,
+  `pwdResetExpires` text NOT NULL,
+  PRIMARY KEY (`pwdResetId`)
+) ENGINE=InnoDB AUTO_INCREMENT=465 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `score` (
+  `idUser` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `score_stage1` int(11) DEFAULT '0',
+  `score_stage2` int(11) DEFAULT '0',
+  `score_stage3` int(11) DEFAULT '0',
+  `score_stage4` int(11) DEFAULT '0',
+  `score_stage5` int(11) DEFAULT '0',
+  `score_stage6` int(11) DEFAULT '0',
+  `score_stage7` int(11) DEFAULT '0',
+  `status_stage1` tinyint(1) DEFAULT '0',
+  `status_stage2` tinyint(1) DEFAULT '0',
+  `status_stage3` tinyint(1) DEFAULT '0',
+  `status_stage4` tinyint(1) DEFAULT '0',
+  `status_stage5` tinyint(1) DEFAULT '0',
+  `status_stage6` tinyint(1) DEFAULT '0',
+  `status_stage7` tinyint(1) DEFAULT '0',
+  `time_stage1` int(11) DEFAULT '0',
+  `time_stage2` int(11) DEFAULT '0',
+  `time_stage3` int(11) DEFAULT '0',
+  `time_stage4` int(11) DEFAULT '0',
+  `time_stage5` int(11) DEFAULT '0',
+  `time_stage6` int(11) DEFAULT '0',
+  `time_stage7` int(11) DEFAULT '0',
+  `progress` int(11) DEFAULT '0',
+  `last_modified` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`idUser`)
+) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=utf8;
+
+CREATE TABLE `users` (
+  `idUser` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `pwd` varchar(255) NOT NULL,
+  `isAdmin` int(11) DEFAULT '0',
+  PRIMARY KEY (`idUser`)
+) ENGINE=InnoDB AUTO_INCREMENT=215 DEFAULT CHARSET=utf8;
+
+
+

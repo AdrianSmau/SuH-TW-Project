@@ -1,0 +1,567 @@
+@font-face {
+    font-family: 'gotham-font';
+    src: url('../fonts/Batfont-e9mm.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'batman-font';
+    src: url("../fonts/batmfa__.ttf");
+}
+
+html,
+body {
+    margin: 0;
+}
+
+html {
+    background: black url("../images/Background/image.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+body {
+    user-select: none;
+    font-family: 'batman-font';
+    text-align: center;
+    color: #1ddd33;
+    text-shadow: 0 0 10px #C724B1, 0 0 15px #C724B1, 0 0 20px #C724B1, 0 0 25px #C724B1, 0 0 30px #C724B1, 0 0 35px #C724B1;
+    border: 0;
+}
+
+
+/*
+Page Preloader
+*/
+
+.pre-loader {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pre-loader>img {
+    width: 300px;
+}
+
+.pre-loader.hidden {
+    animation: fadeOutLoader 1.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutLoader {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.welcome-text {
+    font-size: 22.5px;
+}
+
+
+/*
+Difficulty Modal
+*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 10px;
+}
+
+
+/* Modal Content/Box */
+
+.modal .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2E1A47;
+    width: 400px;
+    height: 350px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    font-family: 'batman-font';
+    font-size: 7.75px;
+}
+
+.modal-content div {
+    color: #1ddd33;
+}
+
+
+/* The Close Button */
+
+.close {
+    font-size: 32px;
+    color: #aaa;
+    border: none;
+    padding: 5px 12px;
+    box-shadow: none;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.close:hover,
+.close:focus {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #1ddd33;
+    cursor: pointer;
+}
+
+
+/*
+Modal Contents
+*/
+
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    clear: both;
+}
+
+.difficulty-div {
+    flex: 3 1;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.modal-content .difficulty-div form select {
+    width: 150px;
+    height: auto;
+    font-size: 17px;
+    background: #C724B1;
+    color: #1ddd33;
+    outline: none;
+    font-family: 'gotham-font';
+    letter-spacing: 2px;
+}
+
+.playBtn {
+    flex: 1 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.playBtn button {
+    position: relative;
+    background: #1ddd33;
+    box-shadow: 0 0 10px #C724B1, 0 0 15px #C724B1, 0 0 20px #C724B1, 0 0 25px #C724B1, 0 0 30px #C724B1, 0 0 35px #C724B1;
+    border: 1px solid;
+    font-size: 21.5px;
+    width: 165px;
+    height: 40px;
+    font-family: 'gotham-font';
+    padding: 5px 25px;
+    border-radius: 5px;
+    transition: .6s;
+    overflow: hidden;
+}
+
+.playBtn button:focus {
+    outline: 0;
+}
+
+.playBtn button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(30px);
+    width: 40px;
+    height: 50px;
+    background: rgba(199, 36, 177, 0.6);
+    transform: translateX(-54px) skewX(-15deg);
+}
+
+.playBtn button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    opacity: 0;
+    width: 20px;
+    height: 50px;
+    background: rgba(199, 36, 177, 0.3);
+    filter: blur(5px);
+    transform: translateX(-54px) skewX(-15deg);
+}
+
+.playBtn button:hover {
+    background: #1da11f;
+    cursor: pointer;
+}
+
+.playBtn button:hover:before {
+    transform: translateX(163px) skewX(-15deg);
+    opacity: 0.6;
+    transition: .7s;
+}
+
+.playBtn button:hover:after {
+    transform: translateX(163px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+}
+
+
+/*
+SCORE PANNEL
+*/
+
+.score-pannel {
+    box-shadow: 0 0 10px #C724B1, 0 0 15px #C724B1, 0 0 20px #C724B1, 0 0 25px #C724B1, 0 0 30px #C724B1, 0 0 35px #C724B1;
+    padding: 0;
+    margin-left: auto;
+    margin-right: 40px;
+    width: 110px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    display: block;
+    clear: both;
+    overflow: hidden;
+    background-color: #2E1A47;
+    color: white;
+    border-radius: 25%;
+}
+
+.score-title {
+    display: inline;
+    vertical-align: middle;
+    line-height: 40px;
+    text-shadow: none;
+}
+
+.score-text {
+    display: inline;
+    vertical-align: middle;
+    line-height: 20px;
+    text-shadow: none;
+}
+
+
+/*
+BACK BUTTON
+*/
+
+.back-button {
+    padding-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+.back-button img {
+    cursor: pointer;
+    width: 80px;
+}
+
+.wrapper-levels {
+    font-family: 'gotham-font';
+    font-size: 18.5px;
+}
+
+.wrapper-levels p {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.wrapper-levels {
+    padding: 0 40px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    top: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+    clear: both;
+    overflow: hidden;
+}
+
+
+/*
+PROGRESS BAR
+*/
+
+.wrapper-progress-bar {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    bottom: 50px;
+    width: 40%;
+    height: 20px;
+    border-radius: 25px;
+    background-color: #2E1A47;
+    box-shadow: 0 0 10px #C724B1, 0 0 15px #C724B1, 0 0 20px #C724B1, 0 0 25px #C724B1, 0 0 30px #C724B1, 0 0 35px #C724B1;
+    left: 30%;
+}
+
+.progress-bar-text {
+    display: inline;
+    text-shadow: none;
+    color: black;
+}
+
+.wrapper-progress-bar-text {
+    display: inline;
+    text-shadow: none;
+    color: white;
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    background-color: #1ddd33;
+    width: 0;
+    height: 100%;
+    border-radius: 25px;
+}
+
+
+/*
+GROW EFFECT
+*/
+
+.grow img {
+    transition: 0.5s;
+}
+
+.grow img:hover {
+    transform: scale(1.2);
+    transition: 0.25 ease;
+}
+
+.level1 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.level2 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.level3 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.level4 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.level5 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.level6 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.level7 {
+    cursor: pointer;
+    flex: 0 1 auto;
+    display: block;
+    width: 80px;
+}
+
+.unlocked img {
+    max-width: 100%;
+    height: auto;
+}
+
+.locked img {
+    max-width: 100%;
+    height: auto;
+}
+
+.completed img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*
+TOOLTIP SECTION
+*/
+
+.level1-title:hover~.tooltip1 {
+    display: block;
+}
+
+.level1-title:hover~.tooltip1>.status,
+.level1-title:hover~.tooltip1>.score,
+.level1-title:hover~.tooltip1>.time {
+    margin: 10px;
+    display: block;
+}
+
+.level2-title:hover~.tooltip2 {
+    display: block;
+}
+
+.level2-title:hover~.tooltip2>.status,
+.level2-title:hover~.tooltip2>.score,
+.level2-title:hover~.tooltip2>.time {
+    margin: 10px;
+    display: block;
+}
+
+.level3-title:hover~.tooltip3 {
+    display: block;
+}
+
+.level3-title:hover~.tooltip3>.status,
+.level3-title:hover~.tooltip3>.score,
+.level3-title:hover~.tooltip3>.time {
+    margin: 10px;
+    display: block;
+}
+
+.level4-title:hover~.tooltip4 {
+    display: block;
+}
+
+.level4-title:hover~.tooltip4>.status,
+.level4-title:hover~.tooltip4>.score,
+.level4-title:hover~.tooltip4>.time {
+    margin: 10px;
+    display: block;
+}
+
+.level5-title:hover~.tooltip5 {
+    display: block;
+}
+
+.level5-title:hover~.tooltip5>.status,
+.level5-title:hover~.tooltip5>.score,
+.level5-title:hover~.tooltip5>.time {
+    margin: 10px;
+    display: block;
+}
+
+.level6-title:hover~.tooltip6 {
+    display: block;
+}
+
+.level6-title:hover~.tooltip6>.status,
+.level6-title:hover~.tooltip6>.score,
+.level6-title:hover~.tooltip6>.time {
+    margin: 10px;
+    display: block;
+}
+
+.level7-title:hover~.tooltip7 {
+    display: block;
+}
+
+.level7-title:hover~.tooltip7>.status,
+.level7-title:hover~.tooltip7>.score,
+.level7-title:hover~.tooltip7>.time {
+    margin: 10px;
+    display: block;
+}
+
+.tooltip1,
+.tooltip2,
+.tooltip3,
+.tooltip4,
+.tooltip5,
+.tooltip6,
+.tooltip7 {
+    outline: solid #C724B1;
+    display: none;
+    text-shadow: none;
+    background-color: black;
+    margin: 0;
+    width: 180px;
+    text-align: center;
+    position: relative;
+    right: 50px;
+}
+
+.tooltip1 {
+    right: 37.5px;
+}
+
+.tooltip7 {
+    right: 62.5px;
+}
+
+@media (max-width:445px) {
+    .wrapper-progress-bar {
+        display: none;
+    }
+}

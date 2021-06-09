@@ -1,0 +1,644 @@
+@font-face {
+    font-family: 'marvel-regular-font';
+    src: url('../fonts/MarvelRegular-Dj83.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'avangers-font';
+    src: url('../fonts/AvengeroRegular-zvgl.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'miss-marvel-font';
+    src: url('../fonts/MissMarvel-rP6O.ttf') format('truetype');
+}
+
+html {
+    background: url("../images/Background/wallpapersden.com_superman-dc-comic_1920x1080.jpg") no-repeat center center fixed;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+body {
+    user-select: none;
+    padding: 0;
+    margin: 0;
+}
+
+.testing {
+    outline-color: cornsilk;
+}
+
+button {
+    z-index: 99;
+}
+
+
+/*
+PopUp
+*/
+
+#popup-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 10px;
+}
+
+#popup {
+    width: 600px;
+    overflow: hidden;
+    background: #C5CFD1;
+    box-shadow: 0 0 20px black;
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    text-align: center;
+    display: block;
+}
+
+#popup span {
+    color: black;
+    font-size: 30px;
+    display: block;
+    margin: 20px 0;
+}
+
+#popup h1 {
+    font-size: 60px;
+    color: black;
+}
+
+.closePopup {
+    font-size: 20px;
+    color: black;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: #5E6674;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+
+/*
+Page Preloader
+*/
+
+.pre-loader {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pre-loader>img {
+    width: 300px;
+}
+
+.pre-loader.hidden {
+    animation: fadeOutLoader 1.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutLoader {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.logo-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.btn-section-wrapper {
+    position: absolute;
+    width: 325px;
+    height: 100%;
+    right: 7.5%;
+    background: url("../images/MainMenu/ezgif.com-gif-maker\ \(1\).gif") no-repeat center top;
+    background-size: auto;
+}
+
+.btn-section {
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* 
+Change password
+*/
+
+.changepass h1 {
+    background: #ED1D24;
+    color: white;
+    height: 10%;
+    width: 100%;
+    transition: none;
+}
+
+.changepass button {
+    background: #ED1D24;
+}
+
+.changepass button:hover h1 {
+    color: black;
+}
+
+.changepass button:hover {
+    background: #ED1D24;
+}
+
+.changepass button:hover:before,
+button:hover:after h1 {
+    width: 100%;
+    transition: none;
+}
+
+.changepass button:before,
+button:after {
+    background: #ED1D24;
+    transition: none;
+}
+
+
+/* Logout buton*/
+
+.log-out-form .log-out h1 {
+    background: #ED1D24;
+    color: white;
+    height: 10%;
+    width: 100%;
+    transition: none;
+}
+
+.log-out-form button {
+    background: #ED1D24;
+}
+
+.log-out-form button:hover h1 {
+    color: black;
+}
+
+.log-out-form button:hover {
+    background: #ED1D24;
+}
+
+.log-out-form button:hover:before,
+button:hover:after h1 {
+    width: 100%;
+    transition: none;
+}
+
+.log-out-form button:before,
+button:after {
+    background: #ED1D24;
+    transition: none;
+}
+
+
+/*Buton Logout finished */
+
+
+/*Buton change password*/
+
+.change-password-form .password-change h1 {
+    background: #ED1D24;
+    color: white;
+    height: 12%;
+    width: 100%;
+    transition: none;
+}
+
+.change-password-form button {
+    background: #ED1D24;
+}
+
+.change-password-form button:hover h1 {
+    color: black;
+}
+
+.change-password-form button:hover {
+    background: #ED1D24;
+}
+
+.change-password-form button:hover:before,
+button:hover:after h1 {
+    width: 100%;
+    transition: none;
+}
+
+.change-password-form button:before,
+button:after {
+    background: #ED1D24;
+    transition: none;
+}
+
+
+/*Button change password finish*/
+
+
+/*Button change language start*/
+
+.limba .changeLang h1 {
+    background: #ED1D24;
+    color: white;
+    height: 12%;
+    width: 100%;
+    transition: none;
+}
+
+.limba button {
+    background: #ED1D24;
+}
+
+.limba button:hover h1 {
+    color: black;
+}
+
+.limba button:hover {
+    background: #ED1D24;
+}
+
+.limba button:hover:before,
+button:hover:after h1 {
+    width: 100%;
+    transition: none;
+}
+
+.limba button:before,
+button:after {
+    background: #ED1D24;
+    transition: none;
+}
+
+
+/* Button change language finished*/
+
+button {
+    background: #ED1D24;
+    font-family: "marvel-regular-font";
+    color: white;
+    border: none;
+    position: relative;
+    font-size: 1.6em;
+    padding: 0.12em 2em;
+    cursor: pointer;
+    height: none;
+    transition: 800ms ease all;
+    outline: none;
+    text-align: center;
+}
+
+button a {
+    transition: 800ms ease all;
+    text-decoration: none;
+    color: white;
+}
+
+button:hover {
+    background: #0476F2;
+    color: black;
+}
+
+button:hover a {
+    color: black;
+}
+
+button:before,
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2.25px;
+    width: 0;
+    background: #ED1D24;
+    transition: 300ms ease all;
+}
+
+button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+
+/* --------------------------- */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 999;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    /* Full width */
+    height: 100vh;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    font-size: 10px;
+    font-family: 'avengers-font';
+}
+
+
+/* Modal Content/Box */
+
+.modal .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ED1D24;
+    width: 420px;
+    height: 230px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    padding-right: 0px;
+    padding-left: 39px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    font-family: 'avangers-font';
+    font-size: 7.75px;
+}
+
+.modal-content div {
+    color: white;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    margin-left: 380px;
+    margin-top: -205px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #ED1D24;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content .volume-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.modal-content .language-div,
+.modal-content .mode-div {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.modal-content .volume-div img {
+    width: 20%;
+}
+
+.modal-content .language-div form select,
+.modal-content .mode-div form select {
+    width: 150px;
+    height: auto;
+    font-size: 17px;
+    background: #0476F2;
+    color: black;
+    outline: none;
+    font-family: 'miss-marvel-font';
+    letter-spacing: 2px;
+}
+
+@media (max-width:470px) {
+    .modal .modal-content {
+        width: 80vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .close {
+        position: absolute;
+        bottom: 98%;
+        right: -1%;
+    }
+}
+
+@media (max-width:520px) {
+    .modal .modal-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .modal-acc .modal-content-acc {
+        width: 52vw;
+        height: 52vh;
+    }
+    .close-acc {
+        position: absolute;
+        left: 50%;
+    }
+    @media (max-width:660px) {
+        .btn-section-wrapper {
+            background: none;
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .user-setings {
+        position: absolute;
+        top: -10%;
+        background: none;
+    }
+}
+
+.user-setings {
+    z-index: 0;
+    cursor: default;
+    position: absolute;
+    bottom: 5%;
+    left: -12%;
+    background: none;
+}
+
+.user-setings:hover,
+.user-setings:hover::before,
+.user-setings:hover:after,
+.user-setings:before,
+.user-setings:after {
+    background: none;
+}
+
+.resize {
+    width: 25%;
+    cursor: pointer;
+}
+
+.grow img {
+    transition: 0.5s;
+}
+
+.grow img:hover {
+    transform: scale(1.1);
+    transition: 0.25 ease;
+    max-width: 100%;
+    height: auto;
+}
+
+.modal-acc {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 999;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    /* Full width */
+    height: 100vh;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    font-size: 10px;
+    font-family: 'avengers-font';
+}
+
+.modal-acc .modal-content-acc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ED1D24;
+    width: 500px;
+    height: 600px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    padding-right: 39px;
+    padding-left: 39px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    font-family: 'avangers-font';
+    font-size: 7.75px;
+}
+
+.modal-content-acc div {
+    color: white;
+    display: flex;
+}
+
+.close-acc {
+    color: #aaa;
+    margin-left: 20px;
+    margin-top: -50px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 99%;
+    right: -1%;
+}
+
+.close-acc:hover,
+.close-acc:focus {
+    color: #ED1D24;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.info {
+    text-indent: 150px;
+}
+
+.fsr-info,
+.lsr-info,
+.mail-info,
+.usr-info {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+}
+
+.fsr-info div,
+.lsr-info div,
+.mail-info div,
+.usr-info div {
+    color: black;
+    font-size: 10.75px;
+}
+
+.psr-change {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.psr-change h1 {
+    cursor: pointer;
+}
+
+.psr-change h1:hover {
+    color: black;
+}
