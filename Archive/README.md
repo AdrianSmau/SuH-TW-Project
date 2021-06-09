@@ -1,5 +1,4 @@
 # SuH-TW-Project
-[HOSTING] : http://super-heroes-web-game.herokuapp.com/ <br>
 02-06-2021 - Prototype7 - Jocul in sine este gata, am implementat un sistem de Password Reset cu ajutorul PHPMailer, urmeaza sa incercam implementarea internationalizarii, a unui MVC pattern, precum si stabilirea unor fisiere htaccess pentru securitate!<br>
 28-05-2021 - Prototype6 - Jocul in sine se apropie de final, mai avem de lucru la interfata cu utilizatorul, generarea de feed RSS la leaderboard si internationalizare!<br>
 [NOTA] - De acum, vom incarca arhive, intrucat avem peste 100 de fisiere! <br>
