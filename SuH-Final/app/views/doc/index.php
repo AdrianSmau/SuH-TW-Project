@@ -868,36 +868,7 @@
             </section>
             <section role="doc-appendix">
                 <h2>Appendix C : To Be Determined List</h2>
-                <p>Pana in acest moment, am implementat doar partea de Front-End a aplicatiei. In cele ce urmeaza, vom prezenta ce mai ramane de implementat:</p>
-                <ol>
-                    <li>
-                        La sectiunea Game din pagina Index, vom scrie regulamentul de desfasurare a jocului, precum si un scurt "trailer" al jocului, sub forma de film.
-                    </li>
-                    <li>
-                        Toata sectiunea de Back-End, pe care va trebui sa o corelam cu ce avem pana in acest moment. Acest lucru poate insemna ca unele detalii de Front-End se pot schimba.
-                    </li>
-                    <li>
-                        Trebuie sa gasim o componenta peste care sa implementam paradigma AJAX.
-                    </li>
-                    <li>
-                        Daca este posibil, vom incerca sa validam / schimbam parola unui user prin trimiterea unui mail de confirmare catre adresa de mail specificata in formularul de Register.
-                    </li>
-                    <li>
-                        Vom incerca sa implementam un mecanism de recuperare a parolei, in caz ca aceasta a fost uitata.
-                    </li>
-                    <li>
-                        Adaugarea de muzica in cadrul paginilor.
-                    </li>
-                    <li>
-                        Setarea limbii pentru a asigura internationalizarea.
-                    </li>
-                    <li>
-                        Securizarea aplicatiei impotriva posibilelor pericole (aflarea datelor de logare, SQL Injection, etc...).
-                    </li>
-                    <li>
-                        Daca totul este in regula, putem sa achizitionam un domeniu si sa facem site-ul public.
-                    </li>
-                </ol>
+                <p>Aplicatia se afla in stadiul ei final! Se mai pot aduce numeroase optimizari si imbunatatiri!</p>
             </section>
         </div>
     </article>
