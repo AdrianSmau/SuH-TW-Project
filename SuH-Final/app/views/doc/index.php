@@ -602,6 +602,10 @@
                         <li>
                         Mediul de invatare ia sfarsit atunci cand utilizatorul raspunde la toate cele 49 de intrebari.
                         </li>
+
+                        <li>
+                            A fost creat si butonul de Download pentru intrebari. Acestea vor fi descarcate sub format CSV, doar cu campurile de IdQuestion si question pentru a ne asigura ca jucatorul nu poate prelua si raspunsul corect din baza de date. Daca limba quiz-ului este engleza, intrebarile descarcate vor fi in engleza, daca limba este franceza, intrebarile vor fi descarcate in limba franceza etc..
+                        </li>
                     </ol>
                     <h4>
                         4.2.5 Baza de date cu intrebari

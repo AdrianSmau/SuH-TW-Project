@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/public/css/quiz.css" rel="stylesheet">
     <link href="/public/images/Favicon/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Training Page</title>
 </head>
 
@@ -59,6 +60,20 @@
             </div>
         </div>
     </div>
+    <?php 
+        if($data['translate']=='ENGLISH'){
+         echo '<a href="../../public/dataframes/intrebari.csv" download="intrebari.csv">
+            <button class="download-button" type="buton" name="export-csv"> <i class="fa fa-download"></i> Download questions as CSV file</button> </a>' ;
+        }
+        else if($data['translate']=='FRENCH'){
+        echo '<a href="../../public/dataframes/intrebariFr.csv" download="intrebariFr.csv">
+        <button class="download-button" type="buton" name="export-csv"> <i class="fa fa-download"></i> Télécharger les questions sous forme de fichier CSV</button> </a>' ;
+        }
+        else {
+            echo '<a href="../../public/dataframes/intrebariDe.csv" download="intrebariDe.csv">
+        <button class="download-button" type="buton" name="export-csv"> <i class="fa fa-download"></i> Fragen als CSV-Datei herunterladen</button> </a>' ;
+        }
+        ?>
     <a href="/public/mainmenu">
         <div class="back-button grow">
             <img src="/public/images/SoloAdv/BackButton.png" alt="Back to Main Menu">

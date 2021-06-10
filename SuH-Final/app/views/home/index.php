@@ -104,6 +104,7 @@
         <p><iframe width="747" height="420" src="https://www.youtube.com/embed/nhp3OPuqszs" title="SuperHeroesWebGame Presentation Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
         <p>THE OFFICIAL SUPERHEROES-WEB-GAME™ DOCUMENTATION CAN BE FOUND <a href="/public/doc" target="_blank" style="color: #ED1D24"> HERE</a>!</p>
         <p>THE OFFICIAL SUPERHEROES-WEB-GAME™ USER GUIDE CAN BE FOUND <a href="/public/guide" target="_blank" style="color: #ED1D24"> HERE</a>!</p>
+        <p>THE OFFICIAL SUPERHEROES-WEB-GAME™ GITHUB PAGE CAN BE FOUND <a href="https://github.com/AdrianSmau/SuH-TW-Project" target="_blank" style="color: #ED1D24"> HERE</a>!</p>
     </section>
     <section id="About" class="about">
         <h1>About</h1>

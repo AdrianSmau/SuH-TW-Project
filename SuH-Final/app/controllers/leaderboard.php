@@ -13,5 +13,6 @@ class Leaderboard extends Controller
         require '../app/models/Translate.php';
         $results = $this->model('GetLeaderboardInfo')->getInfo();
         $this->view('leaderboard/index', array("results" => $results, "currUser" => $_SESSION['usr'], "translate" => $_SESSION['lang']));
+        
     }
 }
